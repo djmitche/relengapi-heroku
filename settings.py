@@ -34,3 +34,6 @@ DEBUG=True
 
 SESSION_COOKIE_NAME='relengapi_ses'
 SECRET_KEY=os.environ['SECRET_KEY']
+
+# allow flask to generate correct URLs (e.g., for Persona)
+PREFERRED_URL_SCHEME='https'
