@@ -1,1 +1,1 @@
-web: env RELENGAPI_SETTINGS=$PWD/settings.py gunicorn run:app --log-file=- --log-level=debug
+web: env RELENGAPI_SETTINGS=$PWD/settings.py gunicorn run:app -c gunicorn_cfg.py --log-file=- --log-level=debug
