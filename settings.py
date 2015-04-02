@@ -30,5 +30,7 @@ RELENGAPI_PERMISSIONS = {
     },
 }
 
+DEBUG=True
+
 SESSION_COOKIE_NAME='relengapi_ses'
 SECRET_KEY=os.environ['SECRET_KEY']
