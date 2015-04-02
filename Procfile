@@ -1,1 +1,1 @@
-web: relengapi serve -a -p 5000
+web: gunicorn run:app --log-file=-

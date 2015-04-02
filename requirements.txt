@@ -12,6 +12,7 @@ elasticache-auto-discovery==0.0.5
 Flask==0.10.1
 Flask-BrowserID==0.0.4
 Flask-Login==0.2.11
+gunicorn==19.3.0
 ipaddr==2.1.11
 itsdangerous==0.24
 Jinja2==2.7.3
