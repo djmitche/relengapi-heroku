@@ -3,9 +3,12 @@
 # file, You can obtain one at http://mozilla.org/MPL/2.0/.
 
 import os
+import os.path
+
+DOCS_BUILD_DIR = os.path.abspath('built-docs')
 
 SQLALCHEMY_DATABASE_URIS = {
-   'relengapi': os.environ['CLEARDB_DATABASE_URL'],
+    'relengapi': os.environ.get('CLEARDB_DATABASE_URL', 'sqlite:///'),
 }
 
 # ===== Authentication and Authorization =====
@@ -33,7 +36,7 @@ RELENGAPI_PERMISSIONS = {
 DEBUG=True
 
 SESSION_COOKIE_NAME='relengapi_ses'
-SECRET_KEY=os.environ['SECRET_KEY']
+SECRET_KEY=os.environ.get('SECRET_KEY', None)
 
 # allow flask to generate correct URLs (e.g., for Persona)
 PREFERRED_URL_SCHEME='https'
